@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Master Of Ceremony</title>
+	<link rel="stylesheet" href="grid.css" type="text/css">
+	<link rel="stylesheet" href="styles.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<style>
+		.project-container {
+			background-color: #FFFECE;
+			max-width: 1200px;
+			margin: 0 auto;
+			box-shadow: 0 0 30px rgba(0,0,0,0.1);
+		}
+		.full-width-image {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
+		}
+		.breadcrumb {
+			padding: 20px;
+			background-color: #FFFECE;
+			font-family: 'IBM Plex Mono', monospace;
+			font-size: 14px;
+		}
+		.breadcrumb a {
+			color: #E69DB8;
+			text-decoration: none;
+		}
+		.breadcrumb a:hover {
+			text-decoration: underline;
+		}
+		.project-title {
+			position: absolute;
+			top: 35%;
+			left: 30%;
+			font-size: 50pt;
+			transform: translate(-20%, -15%);
+			color: #ffffff;
+			text-align: center;
+			text-shadow: 4px 4px 4px #E69DB8;
+		}
+		.image-container {
+			position: relative;
+		}
+		
+		/* Slider Styles */
+		.project-slider {
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+		}
+		.slider-container {
+			display: flex;
+			transition: transform 0.5s ease;
+			width: 300%;
+		}
+		.slider-slide {
+			width: 33.33%;
+			flex-shrink: 0;
+		}
+		.slider-slide img {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
+		}
+		.slider-controls {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			gap: 10px;
+		}
+		.slider-dot {
+			width: 10px;
+			height: 10px;
+			background-color: #E69DB8;
+			border-radius: 50%;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+		.slider-dot.active {
+			background-color: white;
+		}
+		
+		/* Slider Checkbox Hack */
+		.slider-toggle {
+			display: none;
+		}
+		#slide1:checked ~ .slider-container {
+			transform: translateX(0);
+		}
+		#slide2:checked ~ .slider-container {
+			transform: translateX(-33.33%);
+		}
+		#slide3:checked ~ .slider-container {
+			transform: translateX(-66.66%);
+		}
+	</style>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="index.html#contact">contact</a></li>
+			<li>works</li>
+			<li>expertience</li>
+			<li class="empty"></li>
+			<li>behance</li>
+			<li><a href="https://www.instagram.com/hsnllqiss_?igsh=eXdpMGo2bzNvbTl0" target="_blank">instagram</a></li>
+			<li>linkedin</li>
+		</ul>
+	</nav>
+
+	<div class="project-container">
+		<div class="image-container">
+			<img src="foto/mode.jpg" class="full-width-image" alt="Cosmetics Branding Project">
+			<h1 class="project-title">Master Of Ceremony<br>at Several Activities</h1>
+		</div>
+		<div class="breadcrumb">
+			<a href="index.html">Home</a> / Master Of Ceremony
+		</div>
+		<section class="project" style="padding-top: 50px;">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<figure>
+							<img src="foto/mc4.jpg" alt="semusim">
+						</figure>
+					</div>			
+					<div class="col-sm right-allignment">
+						<h2>Firts Experience</h2>
+						<p>Menjadi MC berbahasa Inggris untuk pertama kalinya di acara Semusim LDK adalah pengalaman berharga yang mendorong saya keluar dari zona nyaman. Peran ini menantang saya untuk tampil percaya diri, mengelola alur acara dengan lancar, dan berkomunikasi secara efektif di depan audiens. Meski penuh tantangan, pengalaman ini membuka ruang baru dalam pengembangan diri, terutama dalam hal public speaking dan leadership.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project blue">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Second Chance</h2>
+						<p>Mendapatkan kesempatan kedua</p>
+						<ul>
+						  <li>> Menyusun naskah pembukaan dan transisi acara dalam bahasa Inggris</li>
+						  <li>> Memimpin acara bersama MC pendamping secara bilingual</li>
+						  <li>> Berkoordinasi dengan panitia untuk menjaga kelancaran acara</li>
+						  <li>> Menyesuaikan gaya bicara agar tetap engaging bagi audiens</li>
+						</ul>						
+					</div>
+					<div class="col-sm">
+						<figure>
+							<img src="foto/mc2.jpg" alt="Elbar Event">
+						</figure> 
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<figure>
+							<img src="foto/mc.jpg" alt="seminar IF">
+						</figure>
+					</div>			
+					<div class="col-sm right-allignment">
+						<h2>Another Chance</h2>
+						<p>Kesempatan menjadi MC dalam seminar Himpunan ini adalah langkah penting dalam pengembangan diri saya. Ini memberi peluang untuk meningkatkan keterampilan berbicara di depan umum, berinteraksi dengan audiens, serta memperluas pengalaman di dunia acara profesional, yang semuanya mendukung kemajuan dan kepercayaan diri saya dalam berkomunikasi.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project blue">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Informal MC</h2>
+						<p>Menjadi MC untuk pertama kalinya dalam sebuah acara berskala fakultas merupakan pengalaman yang sangat berarti bagi saya. Meski sempat diliputi keraguan karena belum pernah tampil di hadapan audiens sebesar itu, saya memilih untuk keluar dari zona nyaman dan menerima tantangan tersebut. Kesempatan ini tidak hanya memperluas pengalaman saya dalam dunia public speaking, tetapi juga membangun rasa percaya diri dan kesiapan untuk menghadapi peran yang lebih profesional di masa mendatang.</p>						
+					</div>
+					<div class="col-sm">
+						<figure>
+							<img src="foto/mc6.jpg" alt="PMF">
+						</figure> 
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Documentary</h2>
+						<div class="project-slider">
+							<input type="radio" name="slider" id="slide1" class="slider-toggle" checked>
+							<input type="radio" name="slider" id="slide2" class="slider-toggle">
+							<input type="radio" name="slider" id="slide3" class="slider-toggle">
+							
+							<div class="slider-container">
+								<div class="slider-slide">
+									<img src="foto/mc5.jpg" alt="Dashboard App">
+								</div>
+								<div class="slider-slide">
+									<img src="foto/mc2.jpg" alt="Cosmetics Project">
+								</div>
+								<div class="slider-slide">
+									<img src="foto/mc4.jpg" alt="iPad App">
+								</div>
+							</div>
+							
+							<div class="slider-controls">
+								<label for="slide1" class="slider-dot"></label>
+								<label for="slide2" class="slider-dot"></label>
+								<label for="slide3" class="slider-dot"></label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<footer id="contact">
+		<h2>Interested to Know<br>
+			more About me?<br>husnul.khtimah26@gmail.com</h2>
+			<p>designed & developed by null 2025</p>
+		</footer>
+	</body>
+	</html>

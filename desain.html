@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Graphic Design</title>
+	<link rel="stylesheet" href="grid.css" type="text/css">
+	<link rel="stylesheet" href="styles.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<style>
+		.project-container {
+			background-color: #FFFECE;
+			max-width: 1200px;
+			margin: 0 auto;
+			box-shadow: 0 0 30px rgba(0,0,0,0.1);
+		}
+		.full-width-image {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
+		}
+		.breadcrumb {
+			padding: 20px;
+			background-color: #FFFECE ;
+			font-family: 'IBM Plex Mono', monospace;
+			font-size: 14px;
+		}
+		.breadcrumb a {
+			color: #E69DB8;
+			text-decoration: none;
+		}
+		.breadcrumb a:hover {
+			text-decoration: underline;
+		}
+		.project-title {
+			position: absolute;
+			top: 35%;
+			left: 35%;
+			font-size: 50pt;
+			transform: translate(-20%, -20%);
+			color: #0c0c0c;
+			text-align: center;
+			text-shadow: 2px 2px 4px #FFFECE;
+		}
+		.image-container {
+			position: relative;
+		}
+		
+		/* Slider Styles */
+		.project-slider {
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+		}
+		.slider-container {
+			display: flex;
+			transition: transform 0.5s ease;
+			width: 300%;
+		}
+		.slider-slide {
+			width: 33.33%;
+			flex-shrink: 0;
+		}
+		.slider-slide img {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
+		}
+		.slider-controls {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			gap: 10px;
+		}
+		.slider-dot {
+			width: 10px;
+			height: 10px;
+			background-color: #E69DB8;
+			border-radius: 50%;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+		.slider-dot.active {
+			background-color: white;
+		}
+		
+		/* Slider Checkbox Hack */
+		.slider-toggle {
+			display: none;
+		}
+		#slide1:checked ~ .slider-container {
+			transform: translateX(0);
+		}
+		#slide2:checked ~ .slider-container {
+			transform: translateX(-33.33%);
+		}
+		#slide3:checked ~ .slider-container {
+			transform: translateX(-66.66%);
+		}
+	</style>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="../index.html#contact">contact</a></li>
+			<li>works</li>
+			<li>expertience</li>
+			<li class="empty"></li>
+			<li>behance</li>
+			<li><a href="https://www.instagram.com/hsnllqiss_?igsh=eXdpMGo2bzNvbTl0" target="_blank">instagram</a></li>
+			<li>linkedin</li>
+		</ul>
+	</nav>
+
+	<div class="project-container">
+		<div class="image-container">
+			<img src="foto/editan.jpg" class="full-width-image" alt="Dashboard App UX Design Project">
+			<h1 class="project-title">Graphic Design<br>is my Passion</h1>
+		</div>
+		<div class="breadcrumb">
+			<a href="index.html">Home</a> / Graphic Design
+		</div>
+		<section class="project" style="padding-top: 50px;">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Graphic Design</h2>
+						<p>Ketertarikan saya pada dunia desain grafis berawal dari kesenangan membuat scrapbook digital untuk diunggah di Instagram. Meski belum menguasai aplikasi profesional, saya mulai mengeksplorasi kreativitas lewat Canva dan menemukan passion dalam merancang visual yang estetik dan ekspresif. Ketika bergabung di tim media LDK, saya semakin banyak belajar soal komposisi dan warna. Gaya desain saya cenderung warna-warni pastel, cheerful, sedikit abstrak—mencerminkan kepribadian saya yang ceria, dinamis, dan penuh rasa ingin tahu.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+        <section class="project blue">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Some Of Result</h2>
+						<p>Beberapa editan yang telah saya buat, yaitu</p>
+						<ul>
+						  <li>> Scrapbook</li>
+                          <li>> Pamflet Kegiatan</li>
+						  <li>> Id Card</li>
+						  <li>> Spanduk</li>
+						  <li>> Kalender</li>
+                          <li>> Cover Buku</li>
+						</ul>						
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Project Gallery</h2>
+						<div class="project-slider">
+							<input type="radio" name="slider" id="slide1" class="slider-toggle" checked>
+							<input type="radio" name="slider" id="slide2" class="slider-toggle">
+							<input type="radio" name="slider" id="slide3" class="slider-toggle">
+							
+							<div class="slider-container">
+								<div class="slider-slide">
+									<img src="foto/scrap.jpg" alt="Dashboard App Main Interface">
+								</div>
+								<div class="slider-slide">
+									<img src="foto/sekpat.jpg" alt="Dashboard App Analytics View">
+								</div>
+								<div class="slider-slide">
+									<img src="foto/scrap2.jpg" alt="Dashboard App Mobile View">
+								</div>
+							</div>
+							
+							<div class="slider-controls">
+								<label for="slide1" class="slider-dot"></label>
+								<label for="slide2" class="slider-dot"></label>
+								<label for="slide3" class="slider-dot"></label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<footer id="contact">
+		<h2>Interested to Know<br>
+			more About me?<br>husnul.khtimah26@gmail.com</h2>
+			<p>designed & developed by null 2025</p>
+		</footer>
+	</body>
+	</html>
